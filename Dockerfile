@@ -1,5 +1,5 @@
-FROM alpine
+FROM ubuntu:24.04
 
-RUN apk add gcc make git linux-headers musl-dev
+RUN apt update && apt install -fy gcc make git
 
-RUN git clone https://github.com/HewlettPackard/wireless-tools/ && cd wireless-tools/wireless_tools && make CFLAGS='-Wno-error -Wno-implicit-function-declaration -Wno-int-conversion'
+RUN git clone https://github.com/JimGav/ChessEngine.git && cd ChessEngine && make
