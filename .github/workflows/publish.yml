@@ -33,4 +33,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/${{ toLower(github.repository) }}:latest
+          tags: ghcr.io/jimgav/sbom-sca-scanner:latest
